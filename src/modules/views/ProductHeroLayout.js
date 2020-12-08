@@ -47,6 +47,11 @@ const styles = (theme) => ({
     position: 'absolute',
     bottom: theme.spacing(4),
   },
+  logoColor: {
+    marginBottom: '40',
+    backgroundColor: 'white',
+    borderRadius: 50
+  },
 });
 
 function ProductHeroLayout(props) {
@@ -56,21 +61,15 @@ function ProductHeroLayout(props) {
     <section className={classes.root}>
       <Container className={classes.container}>
         <img
-          src="/static/themes/onepirate/productHeroWonder.png"
+          src="https://images.squarespace-cdn.com/content/5e8e1dd5eb628e6bc2f0ae3c/1589489174141-BHI3BFV11I75VMFABZNW/Local+Choice+Logo_black+with+text_dark.png?format=1500w&content-type=image%2Fpng"
           alt="wonder"
-          width="147"
-          height="80"
+          width="700"
+          color="white"
+          className={classes.logoColor}
         />
         {children}
         <div className={classes.backdrop} />
         <div className={clsx(classes.background, backgroundClassName)} />
-        <img
-          className={classes.arrowDown}
-          src="/static/themes/onepirate/productHeroArrowDown.png"
-          height="16"
-          width="12"
-          alt="arrow down"
-        />
       </Container>
     </section>
   );
